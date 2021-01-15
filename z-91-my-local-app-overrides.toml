@@ -1,0 +1,4 @@
+[pacman]
+  compose_apps = ",rosturtlesim,facemask,shellhttpd,nginxapp,"
+  docker_apps = ",rosturtlesim,facemask,shellhttpd,nginxapp,"
+

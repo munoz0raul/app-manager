@@ -10,17 +10,22 @@ def jobs():
 
 @app.route('/start/<string:app>', methods=['GET', 'POST'])
 def start(app):
-    command = "/xpto/command %s" % (app)
+    command = "./start.sh -a %s -f start" % (app)
     subprocess.call(command, shell=True)
     print(command)
     return redirect('/jobs')
 
 @app.route('/stop/<string:app>', methods=['GET', 'POST'])
 def stop(app):
-    command = "/xpto/command %s" % (app)
+    command = "./start.sh -a %s -f stop" % (app)
     subprocess.call(command, shell=True)
-    subprocess.call(["ls", "-lha"])
-    
+    print(command)
+    return redirect('/jobs')
+
+@app.route('/launch/<string:app>', methods=['GET', 'POST'])
+def launch(app):
+    command = "./start.sh -a %s -f launch" % (app)
+    subprocess.call(command, shell=True)
     print(command)
     return redirect('/jobs')
 

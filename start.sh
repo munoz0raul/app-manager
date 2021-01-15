@@ -50,9 +50,10 @@ case "$function" in
                     XDG_RUNTIME_DIR="/run/user/0" chromium --no-sandbox --user-data-dir=/home/root --in-process-gpu --start-maximized 127.0.0.1:8092/images/live.jpg &
                     ;;
                 python)
+                    XDG_RUNTIME_DIR="/run/user/0" chromium --no-sandbox --user-data-dir=/home/root --in-process-gpu --start-maximized 127.0.0.1:3448 &
                     ;;
                 code-server)
-                    XDG_RUNTIME_DIR="/run/user/0"hromium --no-sandbox --user-data-dir=/home/root --in-process-gpu --start-maximized 127.0.0.1:3448 &
+                    XDG_RUNTIME_DIR="/run/user/0" chromium --no-sandbox --user-data-dir=/home/root --in-process-gpu --start-maximized 127.0.0.1:3449 &
                     ;;
                 facemask)
                     ;;

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Jobs</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Jobs</h1>
+
+    <table>
+        <tr>
+            <th>App</th>
+            <th>Start</th>
+            <th>Stop</th>
+        </tr>
+
+        <tr>
+            <td>App1</td>
+            <td><a href="/start/app1">Start</a></td>
+            <td><a href="/stop/app1">Stop</a></td>
+        </tr>
+
+        <tr>
+            <td>App2</td>
+            <td><a href="/start/app2">Start</a></td>
+            <td><a href="/stop/app2">Stop</a></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

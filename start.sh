@@ -18,7 +18,7 @@ case "$function" in
           echo "Restarting aktualizr-lite"
           systemctl restart aktualizr-lite
           sleep 1
-          XDG_RUNTIME_DIR="/run/user/0" /usr/bin/weston-terminal --font-size=20 --shell="$PWD/journalctl.sh" &
+          XDG_RUNTIME_DIR="/run/user/0" /usr/bin/weston-terminal --font-size=20 --shell="/usr/share/app-manager/journalctl.sh" &
           ;;
       stop)
           echo "Removing App:$app on /etc/sota/conf.d/z-91-my-local-app-overrides.toml"
@@ -58,9 +58,9 @@ case "$function" in
                 facemask)
                     ;;
                 ros)
-                    XDG_RUNTIME_DIR="/run/user/0" /usr/bin/weston-terminal --font-size=20 --shell="$PWD/ros.sh" &
+                    XDG_RUNTIME_DIR="/run/user/0" /usr/bin/weston-terminal --font-size=20 --shell="/usr/share/app-manager/ros.sh" &
                     sleep 5
-                    XDG_RUNTIME_DIR="/run/user/0" /usr/bin/weston-terminal --font-size=20 --shell="$PWD/ros_key.sh" &
+                    XDG_RUNTIME_DIR="/run/user/0" /usr/bin/weston-terminal --font-size=20 --shell="/usr/share/app-manager/ros_key.sh" &
                     ;;
                 *)
                     ;;
